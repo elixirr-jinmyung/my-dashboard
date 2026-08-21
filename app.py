@@ -429,7 +429,7 @@ with col_table:
                 return 'color: gray'
     
     styled_table = display_stats.style.map(color_change, subset=['변화율(%)'])
-    st.dataframe(styled_table, width='stretch', hide_index=True)
+    st.dataframe(styled_table, use_container_width=True, hide_index=True)
 
 st.divider()
 
@@ -546,4 +546,4 @@ with tab5:
 # ==================== TAB 6: 데이터 ====================
 with tab6:
     st.subheader("화학 사고 정보 필터링된 데이터")
-    st.dataframe(work_df, width='stretch', height=600)
+    st.dataframe(work_df, use_container_width=True, height=600)
